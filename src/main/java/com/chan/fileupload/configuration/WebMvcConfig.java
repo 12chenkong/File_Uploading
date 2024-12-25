@@ -1,11 +1,12 @@
 package com.chan.fileupload.configuration;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-
+@EnableWebMvc
 public class  WebMvcConfig implements WebMvcConfigurer {
 
     String clientPath="/images/**";
@@ -16,4 +17,5 @@ public class  WebMvcConfig implements WebMvcConfigurer {
                 .addResourceLocations("file:"+serverPath);
 
     }
+
 }

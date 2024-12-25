@@ -8,4 +8,5 @@ public interface FileStorageService {
 
     String uploadSingleFile(MultipartFile file);
     List<String> uploadMutipleFiles(MultipartFile[] files);
+    boolean deleteImage(String fileName);
 }
